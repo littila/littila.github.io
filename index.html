@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhanibek Darimbek - Software Engineer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        .hover-up:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Header Section -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+                ZHANIBEK DARIMBEK
+            </h1>
+            <div class="flex flex-wrap justify-center items-center gap-3 md:gap-6 text-gray-600">
+                <a href="mailto:zh.darimbek@gmail.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
+                    <i data-feather="mail" class="w-4 h-4"></i>
+                    zh.darimbek@gmail.com
+                </a>
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <span class="hover-up">+7 747 255 0778</span>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-3 md:gap-6 mt-2 text-gray-600">
+                <a href="https://github.com/littila" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
+                    <i data-feather="github" class="w-4 h-4"></i>
+                    github.com/littila
+                </a>
+                <span class="text-gray-400 hidden md:inline">•</span>
+                <a href="https://linkedin.com/in/zhanibekd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
+                    <i data-feather="linkedin" class="w-4 h-4"></i>
+                    linkedin.com/in/zhanibekd
+                </a>
+            </div>
+        </div>
+
+        <!-- CV Button -->
+        <div class="flex justify-center mb-12">
+            <a href="/pdfs/zhanibek.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors hover-up shadow-md">
+                <i data-feather="file-text" class="w-5 h-5"></i>
+                View CV
+            </a>
+        </div>
+
+        <!-- About Section -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">About Me</h2>
+                <div class="space-y-4 text-gray-600">
+                    <p>
+                        Results-driven Software Engineer with 5+ years of experience specializing in 
+                        payment processing systems, API development, and data engineering. Currently 
+                        contributing to Monite's embedded fintech solutions.
+                    </p>
+                    
+                    <h3 class="text-xl font-medium text-gray-800 mt-6 mb-2">Core Expertise</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Building and scaling payment processing systems and financial integrations</li>
+                        <li>API design and development with a focus on security and performance</li>
+                        <li>Leading engineering teams and driving technical initiatives</li>
+                        <li>Data engineering and machine learning applications</li>
+                        <li>Research background in computer vision and deep learning</li>
+                    </ul>
+
+                    <p class="mt-6">
+                        My technical foundation combines practical industry experience with advanced 
+                        academic credentials, including a Masters in Data Science focused on deep 
+                        learning applications. I have a demonstrated ability to bridge complex 
+                        technical challenges with business objectives, while maintaining high 
+                        standards for code quality and system reliability.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Feather Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
