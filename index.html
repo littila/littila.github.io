@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhanibek Darimbek - Software Engineer</title>
+    <title>Zhanibek Darimbek - Senior Software Engineer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -14,15 +14,31 @@
             transform: translateY(-2px);
             transition: transform 0.2s;
         }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
     <div class="container mx-auto px-4 py-12">
         <!-- Header Section -->
-        <div class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+        <div class="text-center mb-8 fade-in">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">
                 ZHANIBEK DARIMBEK
             </h1>
+            <p class="text-xl text-gray-600 mb-4">Senior Software Engineer</p>
             <div class="flex flex-wrap justify-center items-center gap-3 md:gap-6 text-gray-600">
                 <a href="mailto:zh.darimbek@gmail.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
                     <i data-feather="mail" class="w-4 h-4"></i>
@@ -32,11 +48,6 @@
                 <span class="hover-up">+7 747 255 0778</span>
             </div>
             <div class="flex flex-wrap justify-center items-center gap-3 md:gap-6 mt-2 text-gray-600">
-                <a href="https://github.com/littila" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
-                    <i data-feather="github" class="w-4 h-4"></i>
-                    github.com/littila
-                </a>
-                <span class="text-gray-400 hidden md:inline">•</span>
                 <a href="https://linkedin.com/in/zhanibekd" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
                     <i data-feather="linkedin" class="w-4 h-4"></i>
                     linkedin.com/in/zhanibekd
@@ -45,40 +56,189 @@
         </div>
 
         <!-- CV Button -->
-        <div class="flex justify-center mb-12">
-            <a href="/pdfs/zhanibek.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors hover-up shadow-md">
+        <div class="flex justify-center mb-12 fade-in stagger-1">
+            <a href="/CV_Zhanibek_Darimbek.pdf" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors hover-up shadow-md">
                 <i data-feather="file-text" class="w-5 h-5"></i>
                 View CV
             </a>
         </div>
 
         <!-- About Section -->
-        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg mb-8 fade-in stagger-2">
             <div class="p-6">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">About Me</h2>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                    <i data-feather="user" class="w-6 h-6"></i>
+                    About Me
+                </h2>
                 <div class="space-y-4 text-gray-600">
                     <p>
-                        Results-driven Software Engineer with 5+ years of experience specializing in 
-                        payment processing systems, API development, and data engineering. Currently 
-                        contributing to Monite's embedded fintech solutions.
+                        Senior Software Engineer with 5+ years of experience specializing in 
+                        fintech solutions, payment processing systems, and API development. Currently 
+                        building embedded finance APIs at Monite, serving neobanks, vertical SaaS platforms, 
+                        and payment providers across Europe.
                     </p>
                     
-                    <h3 class="text-xl font-medium text-gray-800 mt-6 mb-2">Core Expertise</h3>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>Building and scaling payment processing systems and financial integrations</li>
-                        <li>API design and development with a focus on security and performance</li>
-                        <li>Leading engineering teams and driving technical initiatives</li>
-                        <li>Data engineering and machine learning applications</li>
-                        <li>Research background in computer vision and deep learning</li>
-                    </ul>
-
-                    <p class="mt-6">
+                    <p>
                         My technical foundation combines practical industry experience with advanced 
-                        academic credentials, including a Masters in Data Science focused on deep 
+                        academic credentials, including a Master's in Data Science focused on deep 
                         learning applications. I have a demonstrated ability to bridge complex 
                         technical challenges with business objectives, while maintaining high 
                         standards for code quality and system reliability.
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg mb-8 fade-in stagger-3">
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+                    <i data-feather="briefcase" class="w-6 h-6"></i>
+                    Experience
+                </h2>
+                
+                <!-- Current Position -->
+                <div class="mb-8">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Senior Software Engineer</h3>
+                            <p class="text-blue-600 font-medium">Monite</p>
+                        </div>
+                        <div class="text-gray-500 text-sm md:text-right">
+                            <div>Berlin, Germany (Remote)</div>
+                            <div>May 2024 - Present</div>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li>• Building finance APIs for accounts receivable, payments, and accounting automation</li>
+                        <li>• Implemented delivery notes API for legal proof-of-delivery compliance</li>
+                        <li>• Rebuilt Recurring Invoices API v2 with improved automation and flexibility</li>
+                        <li>• Developed PDF customization engine for AR documents with dynamic templates</li>
+                        <li>• Integrated working capital partner APIs for invoice/bill-based business loans</li>
+                        <li>• Created internal MCP server for AI-assisted development workflows</li>
+                    </ul>
+                </div>
+
+                <!-- Previous Positions -->
+                <div class="mb-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Chief Technology Officer</h3>
+                            <p class="text-blue-600 font-medium">ioka group</p>
+                        </div>
+                        <div class="text-gray-500 text-sm md:text-right">
+                            <div>Almaty, Kazakhstan</div>
+                            <div>Nov 2020 - May 2024</div>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li>• Designed and developed payment processing gateway for e-commerce and fintech</li>
+                        <li>• Built API integrations with banks and financial services</li>
+                        <li>• Mentored team members through regular one-on-ones and performance reviews</li>
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Software Engineer</h3>
+                            <p class="text-blue-600 font-medium">Kazdream Tech</p>
+                        </div>
+                        <div class="text-gray-500 text-sm md:text-right">
+                            <div>Astana, Kazakhstan</div>
+                            <div>May 2019 - Nov 2020</div>
+                        </div>
+                    </div>
+                    <ul class="text-gray-600 space-y-2 mt-3">
+                        <li>• Researched and analyzed open-source data using advanced OSINT techniques</li>
+                        <li>• Automated data collection from 20+ social networking sites and platforms</li>
+                        <li>• Implemented web crawlers and integrated them into B2B APIs and real-time systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg mb-8 fade-in stagger-4">
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+                    <i data-feather="graduation-cap" class="w-6 h-6"></i>
+                    Education
+                </h2>
+                
+                <div class="mb-6">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Master of Science in Data Science</h3>
+                            <p class="text-blue-600 font-medium">Nazarbayev University</p>
+                        </div>
+                        <div class="text-gray-500 text-sm md:text-right">
+                            <div>Astana, Kazakhstan</div>
+                            <div>2020 - 2022</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-2">
+                        <strong>Thesis:</strong> Sequential Deep Learning Models for Human Skeleton-based Gait Recognition
+                    </p>
+                </div>
+
+                <div>
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-800">Bachelor of Science in Computer Science</h3>
+                            <p class="text-blue-600 font-medium">Nazarbayev University</p>
+                        </div>
+                        <div class="text-gray-500 text-sm md:text-right">
+                            <div>Astana, Kazakhstan</div>
+                            <div>2016 - 2020</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-2">
+                        <strong>Related courses:</strong> Algorithms, Performance and Data Structures, Deep Learning, Graph Theory
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg fade-in stagger-4">
+            <div class="p-6">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
+                    <i data-feather="code" class="w-6 h-6"></i>
+                    Technical Skills
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-3">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium text-gray-800 mb-3">Frameworks & Tools</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">aiohttp</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">RabbitMQ</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-medium text-gray-800 mb-3">Specializations</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Fintech APIs</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Payment Systems</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">AI/ML Integration</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">API Design</span>
+                    </div>
                 </div>
             </div>
         </div>
