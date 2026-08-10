@@ -68,7 +68,7 @@
                     About Me
                 </h2>
                 <p class="text-gray-600">
-                    Engineer who ships production AI systems end to end — multi-agent reasoning, retrieval, guardrails, and the full-stack product around them. 7 years across AI platforms, fintech APIs, and payment infrastructure, including tech-lead and CTO roles.
+                    Engineer who ships production AI systems end to end: multi-agent reasoning, retrieval, guardrails, and the full-stack product around them. 7 years across AI platforms, fintech APIs, and payment infrastructure, including tech-lead and CTO roles.
                 </p>
             </div>
         </div>
@@ -93,12 +93,14 @@
                             <div>Oct 2025 – Present</div>
                         </div>
                     </div>
+                    <p class="text-gray-500 text-sm mt-1">Tech lead on Liz, Sema's AI engineering-intelligence platform.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Tech lead on Liz, an AI engineering-intelligence platform serving 100+ organizations.</li>
-                        <li>• Took the AI engine from a basic chat with two integrations to a production multi-agent platform — document search, daily insight scorecards, privacy guardrails, and 20+ integrations.</li>
-                        <li>• Architected a subagent-as-tool pattern with tool calling via code mode; cut per-query Jira/GitHub context from ~2M tokens to 2–5K synthesized summaries. Adopted team-wide.</li>
-                        <li>• Built the document ingestion and semantic retrieval pipeline — extraction, vector search, and grounding citations surfaced directly in chat.</li>
-                        <li>• Delivered the full-stack chat experience in Vue on the AI SDK: real-time streaming, collapsible reasoning, tool-call visualization, markdown rendering.</li>
+                        <li>• Led the agent's migration off live customer APIs onto a governed data layer: an entity-anchored mirror queried through tenant-scoped, read-only SQL views.</li>
+                        <li>• Measured the result end to end: cost per run down 52%, wall-clock time down 68%, score variance more than halved.</li>
+                        <li>• Moved the agent onto Pydantic AI's Capabilities/Harness, replacing home-grown abstractions for context compaction, code mode, subagents and guardrails with maintained framework primitives.</li>
+                        <li>• Replaced retrieval-based analysis of large tabular files with generated code in an isolated sandbox, so counts came from computed aggregates rather than sampled rows.</li>
+                        <li>• Built repeatable trajectory-level evaluation over production agent runs, grading execution efficiency rather than answer quality alone. Found 86% of parallel tool batches stalled behind one slow call, and a headline "slow agent" metric that was 74% queue wait.</li>
+                        <li>• Designed privacy guards across the full agent loop so engineering analytics stay at team level and cannot become individual surveillance.</li>
                     </ul>
                 </div>
 
@@ -115,10 +117,11 @@
                         </div>
                     </div>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Built accounts-receivable, payments, and accounting-automation APIs for neobanks, vertical SaaS, and payment providers.</li>
-                        <li>• Designed a PDF customization engine for AR documents — dynamic templates, styling, and line-item configuration for partners' branding.</li>
-                        <li>• Rebuilt the Recurring Invoices API — added flexible scheduling (weekly, monthly, custom dates), draft/send via email, pause, cancel, and resend flows.</li>
-                        <li>• Built an internal MCP server aggregating context from Notion, Jira, Confluence, and GitHub into a shared space for coding agents — reduced context switching and cut ticket-to-deploy time by connecting business context directly into the development workflow.</li>
+                        <li>• Built accounts-receivable, payments, and accounting-automation APIs for B2B fintech platforms.</li>
+                        <li>• Shipped an AI feature for drafting AR invoices from natural language, using Pydantic AI with tool calling grounded in a company's invoice history; delivered as an API resource and a ready-to-issue PDF.</li>
+                        <li>• Designed a PDF customization engine for AR documents, with dynamic templates, styling, and line-item configuration for partners' branding.</li>
+                        <li>• Rebuilt the Recurring Invoices API with flexible scheduling (weekly, monthly, custom dates), draft/send via email, and pause, cancel, and resend flows.</li>
+                        <li>• Stood up an internal MCP server that pulls context from Notion, Jira, Confluence, and GitHub into one space for coding agents, cutting context switching and ticket-to-deploy time.</li>
                     </ul>
                 </div>
 
@@ -134,13 +137,13 @@
                             <div>Nov 2020 – May 2024</div>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm mt-1">Founding engineer; grew to CTO of a payment gateway serving 200+ merchants across Kazakhstan e-commerce and fintech.</p>
+                    <p class="text-gray-500 text-sm mt-1">Founding engineer; grew to CTO of a fintech and travel ecosystem in Kazakhstan and Uzbekistan.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Built the payment gateway from scratch and took it to 200+ merchants — talked directly to merchant developers, collected feedback, built custom solutions, and made them scale.</li>
+                        <li>• Built the payment gateway from scratch and took it to 200+ merchants: talked directly to customers' developers, collected feedback, built custom solutions, and scaled with them.</li>
                         <li>• Shipped APIs and mobile SDKs for card acquiring, Apple Pay, Google Pay, BNPL, saved cards, subscriptions, P2P, payment links, and payouts.</li>
                         <li>• Built multi-acquirer orchestration with routing by availability, cost, and payment scheme.</li>
-                        <li>• Led PCI DSS Level 1 certification — worked with QSA assessors, documented architecture and processes, ran scans, applied recommendations, maintained compliance across quarterly and annual cycles.</li>
-                        <li>• Built ioka Travel's backend — GDS and railway ticket provider integrations, deployed end-to-end to first customers in Uzbekistan.</li>
+                        <li>• Led PCI DSS Level 1 certification: worked with QSA assessors, documented architecture and processes, ran scans, applied recommendations, and maintained compliance across quarterly and annual cycles.</li>
+                        <li>• Built ioka Travel's backend with GDS and railway ticket provider integrations, deployed end to end to first customers in Uzbekistan.</li>
                     </ul>
                 </div>
 
@@ -201,7 +204,8 @@
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Multi-agent systems</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">RAG & semantic retrieval</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MCP servers</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Evals & guardrails</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Tool / function calling</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Trajectory-level evals & guardrails</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Pydantic AI</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">OpenAI / Anthropic / Gemini SDKs</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">LangChain / LangGraph</span>
@@ -231,7 +235,7 @@
                     <div>
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Frontend & Tools</h3>
                         <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Vue</span>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">React</span>
                             <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">TypeScript</span>
                             <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">AI SDK (streaming UIs)</span>
                             <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Docker</span>
