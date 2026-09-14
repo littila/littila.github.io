@@ -93,13 +93,14 @@
                             <div>Oct 2025 – Aug 2026</div>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's Jira/Linear, GitHub, Slack and internal documents. Tech lead, 5 engineers; hands-on across design, build and ship.</p>
+                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's issue trackers, code repos, docs and comms. Tech lead, 5 engineers; hands-on across design, build and ship.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Took Liz from a proof of concept over Jira and GitHub to the production system: Slack, Zoom, Teams and document ingestion, hybrid pgvector retrieval, subagents, tool search, context compaction.</li>
-                        <li>• Moved the agent off live Jira/GitHub APIs onto read-only SQL views over a mirrored data layer, so aggregation runs in SQL instead of the model. Cost per run down 52%, wall-clock 68%, score variance halved.</li>
-                        <li>• Replaced model-driven tool calls with code generated and run in a sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
-                        <li>• Profiled production runs to find where the agent wasted time and tokens — oversized tool returns, unstable tool parameters on repeat runs, and parallel batches stalled by one slow call (86%).</li>
-                        <li>• Built the privacy enforcement that keeps the product from becoming developer surveillance, at four points in the agent loop. Scrapped my own salted-hash design once the hashes proved re-identifiable.</li>
+                        <li>• Took Liz from a proof of concept over Jira and GitHub to the production system, ingesting 12+ sources across code, issues, docs, chats, calls and email, with hybrid retrieval over pgvector.</li>
+                        <li>• Moved the agent off live provider APIs onto read-only SQL views over a mirrored layer covering all sources, so aggregation runs in SQL. Cost per run down 52%, wall-clock 68%, variance halved.</li>
+                        <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate — what each exposes, its constraints, its return shape — and shipped the team's tool-definition standard as an agent skill.</li>
+                        <li>• Replaced model-driven tool calls with programmatic tool calling in the Monty sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
+                        <li>• Built repeatable trajectory-level evaluation over production runs, grading execution efficiency together with answer quality, and packaged it as a reusable skill for agent debugging and optimization.</li>
+                        <li>• Moved the agent onto Pydantic AI's Capabilities/Harness, replacing home-grown abstractions for context compaction, code mode, subagents and guardrails with maintained framework primitives.</li>
                     </ul>
                 </div>
 
