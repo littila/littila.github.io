@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhanibek Darimbek - Applied AI / Agent Engineer</title>
+    <title>Zhanibek Darimbek - AI Engineer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -38,7 +38,7 @@
             <h1 class="text-4xl font-bold text-gray-900 mb-2">
                 ZHANIBEK DARIMBEK
             </h1>
-            <p class="text-xl text-gray-600 mb-4">Applied AI / Agent Engineer</p>
+            <p class="text-xl text-gray-600 mb-4">AI Engineer</p>
             <div class="flex flex-wrap justify-center items-center gap-3 md:gap-6 text-gray-600">
                 <a href="mailto:zh.darimbek@gmail.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors hover-up">
                     <i data-feather="mail" class="w-4 h-4"></i>
@@ -90,17 +90,16 @@
                         </div>
                         <div class="text-gray-500 text-sm md:text-right">
                             <div>US (Remote)</div>
-                            <div>Oct 2025 – Present</div>
+                            <div>Oct 2025 – Aug 2026</div>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm mt-1">Tech lead on Liz, Sema's AI engineering-intelligence platform.</p>
+                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's Jira/Linear, GitHub, Slack and internal documents. Tech lead, 5 engineers; hands-on across design, build and ship.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Led the agent's migration off live customer APIs onto a governed data layer: an entity-anchored mirror queried through tenant-scoped, read-only SQL views.</li>
-                        <li>• Measured the result end to end: cost per run down 52%, wall-clock time down 68%, score variance more than halved.</li>
-                        <li>• Moved the agent onto Pydantic AI's Capabilities/Harness, replacing home-grown abstractions for context compaction, code mode, subagents and guardrails with maintained framework primitives.</li>
-                        <li>• Replaced retrieval-based analysis of large tabular files with generated code in an isolated sandbox, so counts came from computed aggregates rather than sampled rows.</li>
-                        <li>• Built repeatable trajectory-level evaluation over production agent runs, grading execution efficiency rather than answer quality alone. Found 86% of parallel tool batches stalled behind one slow call, and a headline "slow agent" metric that was 74% queue wait.</li>
-                        <li>• Designed privacy guards across the full agent loop so engineering analytics stay at team level and cannot become individual surveillance.</li>
+                        <li>• Took Liz from a proof of concept over Jira and GitHub to the production system: Slack, Zoom, Teams and document ingestion, hybrid pgvector retrieval, subagents, tool search, context compaction.</li>
+                        <li>• Moved the agent off live Jira/GitHub APIs onto read-only SQL views over a mirrored data layer, so aggregation runs in SQL instead of the model. Cost per run down 52%, wall-clock 68%, score variance halved.</li>
+                        <li>• Replaced model-driven tool calls with code generated and run in a sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
+                        <li>• Profiled production runs to find where the agent wasted time and tokens — oversized tool returns, unstable tool parameters on repeat runs, and parallel batches stalled by one slow call (86%).</li>
+                        <li>• Built the privacy enforcement that keeps the product from becoming developer surveillance, at four points in the agent loop. Scrapped my own salted-hash design once the hashes proved re-identifiable.</li>
                     </ul>
                 </div>
 
@@ -179,13 +178,14 @@
                         <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">AI / LLM</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Multi-agent systems</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">RAG & semantic retrieval</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MCP servers</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Tool / function calling</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Trajectory-level evals & guardrails</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Sandboxed code execution</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Hybrid retrieval (pgvector + full-text, RRF)</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">MCP servers</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Agent guardrails &amp; trajectory analysis</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Pydantic AI</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">OpenAI / Anthropic / Gemini SDKs</span>
-                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">LangChain / LangGraph</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">LangChain / LangGraph (familiar)</span>
                         </div>
                     </div>
 
@@ -194,28 +194,22 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Python (async)</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Django + DRF</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">aiohttp</span>
                             <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">REST API design</span>
                         </div>
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Data</h3>
+                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Data &amp; Infra</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">PostgreSQL</span>
                             <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">pgvector</span>
                             <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Redis</span>
                             <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">RabbitMQ</span>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Frontend & Tools</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">React</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">TypeScript</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">AI SDK (streaming UIs)</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Temporal</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Logfire / OpenTelemetry</span>
                         </div>
                     </div>
                 </div>
