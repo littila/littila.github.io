@@ -97,9 +97,9 @@
                     <ul class="text-gray-600 space-y-2 mt-3">
                         <li>• Took Liz from a proof of concept over Jira and GitHub to the production system, ingesting 12+ sources across code, issues, docs, chats, calls and email, with hybrid retrieval over pgvector.</li>
                         <li>• Moved the agent off live provider APIs onto read-only SQL views over a mirrored layer covering all sources, so aggregation runs in SQL. Cost per run down 52%, wall-clock 68%, variance halved.</li>
-                        <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate — what each exposes, its constraints, its return shape — and shipped the team's tool-definition standard as an agent skill.</li>
+                        <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate, and shipped the standard as an agent skill — 5 engineers adding tools weekly, no repeated manual review.</li>
                         <li>• Replaced model-driven tool calls with programmatic tool calling in the Monty sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
-                        <li>• Built repeatable trajectory-level evaluation over production runs, grading execution efficiency together with answer quality, and packaged it as a reusable skill for agent debugging and optimization.</li>
+                        <li>• Built offline trajectory-level evals on production traces, scoring answer quality, tool-call correctness, latency, token use and failure counts across repeated runs on frozen inputs.</li>
                         <li>• Moved the agent onto Pydantic AI's Capabilities/Harness, replacing home-grown abstractions for context compaction, code mode, subagents and guardrails with maintained framework primitives.</li>
                     </ul>
                 </div>
@@ -119,8 +119,7 @@
                     <ul class="text-gray-600 space-y-2 mt-3">
                         <li>• Built accounts-receivable, payments and accounting-automation APIs consumed by dozens of B2B platforms — vertical SaaS, other fintechs and payment providers.</li>
                         <li>• Shipped an AI feature for drafting AR invoices from natural language, using Pydantic AI with tool calling grounded in a company's invoice history; delivered as an API resource and a ready-to-issue PDF.</li>
-                        <li>• Designed a PDF customization engine for AR documents, with dynamic templates, styling, and line-item configuration for partners' branding.</li>
-                        <li>• Rebuilt the Recurring Invoices API with flexible scheduling (weekly, monthly, custom dates), draft/send via email, and pause, cancel, and resend flows.</li>
+                        <li>• Owned the AR document and billing surface: PDF customization with partner branding, recurring invoices with flexible scheduling, delivery notes, invoice financing and Xero/QuickBooks sync.</li>
                         <li>• Stood up an internal MCP server that pulls context from Notion, Jira, Confluence, and GitHub into one space for coding agents, cutting context switching and ticket-to-deploy time.</li>
                     </ul>
                 </div>
