@@ -93,14 +93,14 @@
                             <div>Oct 2025 – Aug 2026</div>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's issue trackers, code repos, docs and comms. Tech lead, 5 engineers; hands-on across design, build and ship.</p>
+                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's issue trackers, code repos, docs and comms.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Took Liz from a proof of concept over Jira and GitHub to the production system, ingesting 12+ sources across code, issues, docs, chats, calls and email, with hybrid retrieval over pgvector.</li>
+                        <li>• Took Liz from a proof of concept over Jira and GitHub to the production system, ingesting 12+ sources across code, issues, docs, chats, calls and email.</li>
                         <li>• Moved the agent off live provider APIs onto read-only SQL views over a mirrored layer covering all sources, so aggregation runs in SQL. Cost per run down 52%, wall-clock 68%, variance halved.</li>
+                        <li>• Built the governed SQL layer the agent queries through: fixed allowlist of read-only views, single-statement parsing, row caps and session-scoped tenant isolation, with a test per known bypass class.</li>
                         <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate, and shipped the standard as an agent skill — 5 engineers adding tools weekly, no repeated manual review.</li>
                         <li>• Replaced model-driven tool calls with programmatic tool calling in the Monty sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
-                        <li>• Built offline trajectory-level evals on production traces, scoring answer quality, tool-call correctness, latency, token use and failure counts across repeated runs on frozen inputs.</li>
-                        <li>• Moved the agent onto Pydantic AI's Capabilities/Harness, replacing home-grown abstractions for context compaction, code mode, subagents and guardrails with maintained framework primitives.</li>
+                        <li>• Made agent score drift diagnosable: offline evals over run traces and Logfire/OTel spans via MCP, separating prompt-fixable variance from data-driven variance and model non-determinism.</li>
                     </ul>
                 </div>
 
