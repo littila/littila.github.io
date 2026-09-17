@@ -93,11 +93,11 @@
                             <div>Oct 2025 – Aug 2026</div>
                         </div>
                     </div>
-                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent answering engineering-org questions (delivery health, process leakage, planning risk) over a company's issue trackers, code repos, docs and comms.</p>
+                    <p class="text-gray-500 text-sm mt-1">Liz — an AI agent for engineering intelligence over a company's issue trackers, code repos, docs and comms.</p>
                     <ul class="text-gray-600 space-y-2 mt-3">
                         <li>• Took Liz from a proof of concept over Jira and GitHub to the production system, ingesting 12+ sources across code, issues, docs, chats, calls and email.</li>
                         <li>• Moved the agent off live provider APIs onto read-only SQL views over a mirrored layer covering all sources, so aggregation runs in SQL. Cost per run down 52%, wall-clock 68%, variance halved.</li>
-                        <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate, and shipped the standard as an agent skill — 5 engineers adding tools weekly, no repeated manual review.</li>
+                        <li>• Designed the agent's tool interfaces across sources differing in size, structure and update rate, and shipped the standard as an agent skill; 5 engineers adding tools weekly, no repeated manual review.</li>
                         <li>• Replaced model-driven tool calls with programmatic tool calling in the Monty sandbox: multi-MB tool outputs never reach the context window, and aggregation is exact rather than sampled.</li>
                         <li>• Made agent score drift diagnosable: offline evals over run traces and Logfire/OTel spans via MCP, separating prompt-fixable variance from data-driven variance and model non-determinism.</li>
                     </ul>
@@ -116,10 +116,9 @@
                         </div>
                     </div>
                     <ul class="text-gray-600 space-y-2 mt-3">
-                        <li>• Built accounts-receivable, payments and accounting-automation APIs consumed by dozens of B2B platforms — vertical SaaS, other fintechs and payment providers.</li>
+                        <li>• Owned the accounts-receivable document and billing surface: PDF customization with partner branding, recurring invoices with flexible scheduling, delivery notes, invoice financing and Xero/QuickBooks sync.</li>
                         <li>• Shipped an AI feature for drafting AR invoices from natural language, using Pydantic AI with tool calling grounded in a company's invoice history; delivered as an API resource and a ready-to-issue PDF.</li>
-                        <li>• Owned the AR document and billing surface: PDF customization with partner branding, recurring invoices with flexible scheduling, delivery notes, invoice financing and Xero/QuickBooks sync.</li>
-                        <li>• Stood up an internal MCP server that pulls context from Notion, Jira, Confluence, and GitHub into one space for coding agents, cutting context switching and ticket-to-deploy time.</li>
+                        <li>• Built internal MCP server that pulls context from Notion, Jira, Confluence, and GitHub into one space for coding agents, cutting context switching and ticket-to-deploy time.</li>
                     </ul>
                 </div>
 
